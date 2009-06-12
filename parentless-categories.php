@@ -48,7 +48,7 @@ Description: Like the_category(), list categories assigned to a post, but exclud
     Displays something like:
         `<a href="http://yourblog.com/category/fruiting/cucumber">Cucumber</a>, <a href="http://yourblog.com/category/fruiting/pumpkin">Pumpkin</a>`
 
-Compatible with WordPress 2.5+, 2.6+, 2.7+.
+Compatible with WordPress 2.5+, 2.6+, 2.7+, 2.8+.
 
 =>> Read the accompanying readme.txt file for more information.  Also, visit the plugin's homepage
 =>> for more information and the latest updates
