@@ -1,15 +1,16 @@
 <?php
 /**
  * Plugin Name: Parentless Categories
- * Version:     2.0.2
+ * Version:     2.0.3
  * Plugin URI:  http://coffee2code.com/wp-plugins/parentless-categories/
  * Author:      Scott Reilly
  * Author URI:  http://coffee2code.com/
+ * Text Domain: parentless-categories
  * License:     GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Description: List a post's categories that don't have a parent category also directly assigned to the post (basically lists all leaf nodes).
  *
- * Compatible with WordPress 3.6 through 4.3+.
+ * Compatible with WordPress 3.6 through 4.4+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
@@ -17,11 +18,11 @@
  *
  * @package Parentless_Categories
  * @author  Scott Reilly
- * @version 2.0.2
+ * @version 2.0.3
  */
 
 /*
-	Copyright (c) 2008-2015 by Scott Reilly (aka coffee2code)
+	Copyright (c) 2008-2016 by Scott Reilly (aka coffee2code)
 
 	This program is free software; you can redistribute it and/or
 	modify it under the terms of the GNU General Public License
@@ -49,9 +50,10 @@ if ( ! function_exists( 'c2c_parentless_categories' ) ) :
  *
  * @since 2.0
  *
- * @param  string    $separator (optional) String to use as the separator
- * @param  int|false $post_id   (optional) Post ID. If 'false', then the current post is assumed.  Default is 'false'.
- * @return void      (Text is echoed)
+ * @param  string    $separator Optional. String to use as the separator.
+ *                              Default ''.
+ * @param  int|false $post_id   Optional. Post ID. If false, then the current
+ *                              post is assumed. Default false.
 */
 function c2c_parentless_categories( $separator = '', $post_id = false ) {
 	echo c2c_get_parentless_categories_list( $separator, $post_id );
@@ -69,8 +71,10 @@ if ( ! function_exists( 'c2c_get_parentless_categories_list' ) ) :
  *
  * @since 2.0
  *
- * @param  string    $separator (optional) String to use as the separator
- * @param  int|false $post_id   (optional) Post ID. If 'false', then the current post is assumed.  Default is 'false'.
+ * @param  string    $separator Optional. String to use as the separator.
+ *                              Default ''.
+ * @param  int|false $post_id   Optional. Post ID. If 'false', then the current
+ *                              post is assumed. Default false.
  * @return string    The HTML formatted list of parentless categories
  */
 function c2c_get_parentless_categories_list( $separator = '', $post_id = false ) {
@@ -132,16 +136,20 @@ if ( ! function_exists( 'c2c_get_parentless_categories' ) ) :
  *
  * @since 2.0
  *
- * @param  int|false $post_id        (optional) Post ID. If 'false', then the current post is assumed.  Default is 'false'.
- * @param  bool      $omit_ancestors (optional) Prevent any ancestors from also being listed, not just immediate parents?
- * @return array     The array of parentless categories for the given category. If false, then assumes a top-level category.
+ * @param  int|false $post_id        Optional. Post ID. If 'false', then the
+ *                                   current post is assumed. Default false.
+ * @param  bool      $omit_ancestors Optional. Prevent any ancestors from also
+ *                                   being listed, not just immediate parents?
+ *                                   Default true.
+ * @return array     The array of parentless categories for the given category.
+ *                   If false, then assumes a top-level category.
  */
 function c2c_get_parentless_categories( $post_id = false, $omit_ancestors = true ) {
 	$categories = get_the_category( $post_id );
 
 	$cats = $parents = array();
 
-	if ( empty( $categories ) ) {
+	if ( ! $categories ) {
 		return $cats;
 	}
 

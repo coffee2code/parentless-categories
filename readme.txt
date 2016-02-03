@@ -5,8 +5,8 @@ Tags: categories, category, list, the_category, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.6
-Tested up to: 4.3
-Stable tag: 2.0.2
+Tested up to: 4.4
+Stable tag: 2.0.3
 
 Like the_category(), list categories assigned to a post, but excluding assigned categories that have a child category also assigned to the post.
 
@@ -176,8 +176,13 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
-= () =
-* Update: Note compatibility through WP 4.3+
+= 2.0.3 (2016-02-02) =
+* New: Define 'Text Domain' plugin header attribute.
+* New: Create empty index.php to prevent files from being listed if web server has enabled directory listings.
+* Change: Explicitly declare methods in unit tests as public.
+* Change: Minor reformatting and improvements to internal code documentation.
+* Change: Note compatibility through WP 4.4+.
+* Change: Update copyright date (2016).
 
 = 2.0.2 (2015-02-11) =
 * Note compatibility through WP 4.1+
@@ -257,6 +262,9 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 
 
 == Upgrade Notice ==
+
+= 2.0.3 =
+Trivial update: noted compatibility through WP 4.4+ and updated copyright date (2016)
 
 = 2.0.2 =
 Trivial update: noted compatibility through WP 4.1+ and updated copyright date
