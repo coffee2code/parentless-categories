@@ -179,6 +179,7 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 = () =
 * Change: Update unit test bootstrap
     * Default `WP_TESTS_DIR` to `/tmp/wordpress-tests-lib` rather than erroring out if not defined via environment variable
+    * Enable more error output for unit tests
 
 = 2.0.3 (2016-02-02) =
 * New: Define 'Text Domain' plugin header attribute.
