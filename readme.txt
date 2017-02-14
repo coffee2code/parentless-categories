@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.6
 Tested up to: 4.7
-Stable tag: 2.0.3
+Stable tag: 2.0.4
 
 Like the_category(), list categories assigned to a post, but excluding assigned categories that have a child category also assigned to the post.
 
@@ -183,7 +183,7 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
-= () =
+= 2.0.4 (2017-02-13) =
 * Fix: Replace use of deprecated (in WP 4.7) `_usort_terms_by_name()` with `wp_list_sort()` for WP 4.7+
 * Change: Update unit test bootstrap
     * Default `WP_TESTS_DIR` to `/tmp/wordpress-tests-lib` rather than erroring out if not defined via environment variable
@@ -279,6 +279,9 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 
 
 == Upgrade Notice ==
+
+= 2.0.4 =
+Recommended minor update: fixed PHP warning in WP 4.7 due to function deprecation, noted compatibility through WP 4.7+, updated copyright date
 
 = 2.0.3 =
 Trivial update: noted compatibility through WP 4.4+ and updated copyright date (2016)

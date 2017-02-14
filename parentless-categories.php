@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Parentless Categories
- * Version:     2.0.3
+ * Version:     2.0.4
  * Plugin URI:  http://coffee2code.com/wp-plugins/parentless-categories/
  * Author:      Scott Reilly
  * Author URI:  http://coffee2code.com/
@@ -18,7 +18,7 @@
  *
  * @package Parentless_Categories
  * @author  Scott Reilly
- * @version 2.0.3
+ * @version 2.0.4
  */
 
 /*
