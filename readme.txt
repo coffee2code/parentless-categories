@@ -59,10 +59,10 @@ Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/parentless-categories
 
 == Installation ==
 
-1. Unzip `parentless-categories.zip` inside the `/wp-content/plugins/` directory for your site (or install via the built-in WordPress plugin installer)
-1. Activate the plugin through the 'Plugins' admin menu in WordPress
-1. (optional) Add filters for 'parentless_categories' to filter parentless category listing
-1. Use the template tag `<?php c2c_parentless_categories(); ?>` somewhere inside "the loop"
+1. Install via the built-in WordPress plugin installer. Or download and unzip `parentless-categories.zip` inside the plugins directory for your site (typically `wp-content/plugins/`)
+2. Activate the plugin through the 'Plugins' admin menu in WordPress
+3. (optional) Add filters for 'parentless_categories' to filter parentless category listing
+4. Use the template tag `<?php c2c_parentless_categories(); ?>` somewhere inside "the loop"
 
 
 == Frequently Asked Questions ==
@@ -109,7 +109,7 @@ Optional argument. (bool) Should any ancestor categories be omitted from being l
 
 == Filters ==
 
-The plugin is further customizable via five hooks.
+The plugin is further customizable via five hooks. Code using these filters should ideally be put into a mu-plugin or site-specific plugin (which is beyond the scope of this readme to explain). Less ideally, you could put them in your active theme's functions.php file.
 
 = c2c_parentless_categories (action), c2c_get_parentless_categories_list, c2c_get_parentless_categories (filters) =
 
@@ -131,18 +131,24 @@ Do:
 
 = c2c_parentless_categories_list (filter) =
 
-The 'c2c_parentless_categories_list' filter allows you to customize or override function.
+The 'c2c_parentless_categories_list' filter allows you to customize or override the return value of the `c2c_parentless_categories_list()` function.
 
 Arguments:
 
 * string    $thelist   : the generated list of categories with complete HTML markup, or __( 'Uncategorized' ) if the post didn't have any categories
 * string    $separator : the separator specified by the user, or '' if not specified
 * int|false $post_id   : the ID of the post, or false to indicate the current post
+
 Example:
 
 `
-// For comma-separated listings, append a special string
-add_filter( 'c2c_parentless_categories_list', 'customize_c2c_parentless_categories_list' );
+/**
+ * Amend comma-separated parentless categories listing with a special string.
+ *
+ * @param  string $thelist The parentless categories list.
+ * @param  string $separator Optional. String to use as the separator.
+ * @return string
+ */
 function c2c_parentless_categories_list( $thelist, $separator ) {
 	// If not categorized, do nothing
 	if ( __( 'Uncategorized' ) == $thelist ) {
@@ -156,6 +162,7 @@ function c2c_parentless_categories_list( $thelist, $separator ) {
 
 	return $thelist;
 }
+add_filter( 'c2c_parentless_categories_list', 'customize_c2c_parentless_categories_list' );
 `
 
 = c2c_get_parentless_categories_omit_ancestors (filter) =
@@ -182,6 +189,7 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
     * Default `WP_TESTS_DIR` to `/tmp/wordpress-tests-lib` rather than erroring out if not defined via environment variable
     * Enable more error output for unit tests
 * Change: Note compatibility through WP 4.7+
+* Change: Minor readme.txt content and formatting tweaks
 * Change: Update copyright date (2017)
 * New: Add LICENSE file
 
