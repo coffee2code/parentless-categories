@@ -173,7 +173,12 @@ function c2c_get_parentless_categories( $post_id = false, $omit_ancestors = true
 		}
 	}
 	
-	usort( $cats, '_usort_terms_by_name' );
+	// Order categories by name.
+	if ( function_exists( 'wp_list_sort' ) ) { // Introduced in WP 4.7
+		$cats = wp_list_sort( $cats, 'name' );
+	} else {
+		usort( $cats, '_usort_terms_by_name' );
+	}
 
 	return $cats;
 }
