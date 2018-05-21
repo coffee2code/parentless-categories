@@ -111,7 +111,7 @@ Optional argument. (bool) Should any ancestor categories be omitted from being l
 
 The plugin is further customizable via five hooks. Code using these filters should ideally be put into a mu-plugin or site-specific plugin (which is beyond the scope of this readme to explain). Less ideally, you could put them in your active theme's functions.php file.
 
-= c2c_parentless_categories (action), c2c_get_parentless_categories_list, c2c_get_parentless_categories (filters) =
+**c2c_parentless_categories (action), c2c_get_parentless_categories_list, c2c_get_parentless_categories (filters)**
 
 These actions and filters allow you to use an alternative approach to safely invoke each of the identically named function in such a way that if the plugin were deactivated or deleted, then your calls to the functions won't cause errors on your site.
 
@@ -129,7 +129,7 @@ Do:
 
 `<?php do_action( 'c2c_parentless_categories', ',' ); ?>`
 
-= c2c_parentless_categories_list (filter) =
+**c2c_parentless_categories_list (filter)**
 
 The 'c2c_parentless_categories_list' filter allows you to customize or override the return value of the `c2c_parentless_categories_list()` function.
 
@@ -165,7 +165,7 @@ function c2c_parentless_categories_list( $thelist, $separator ) {
 add_filter( 'c2c_parentless_categories_list', 'customize_c2c_parentless_categories_list' );
 `
 
-= c2c_get_parentless_categories_omit_ancestors (filter) =
+**c2c_get_parentless_categories_omit_ancestors (filter)**
 
 The 'c2c_get_parentless_categories_omit_ancestors' filter allows you to customize or override the function argument indicating if ancestor categories of all directly assigned categories (even if directly assigned themselves) should be omitted from the return list of categories. By default, this argument is true.
 
@@ -187,6 +187,7 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 * New: Add GitHub link to readme
 * Change: Minor whitespace tweaks to unit test bootstrap
 * Change: Rename readme.txt section from 'Filters' to 'Hooks'
+* Change: Modify formatting of hook name in readme to prevent being uppercased when shown in the Plugin Directory
 * Change: Note compatibility through WP 4.9+
 * Change: Update copyright date (2018)
 
