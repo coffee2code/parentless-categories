@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.6
 Tested up to: 4.9
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 
 Like the_category(), list categories assigned to a post, but excluding assigned categories that have a child category also assigned to the post.
 
@@ -183,7 +183,7 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
-= () =
+= 2.0.5 (2018-05-20) =
 * New: Add README.md
 * New: Add GitHub link to readme
 * Change: Minor whitespace tweaks to unit test bootstrap
@@ -289,6 +289,9 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 
 
 == Upgrade Notice ==
+
+= 2.0.5 =
+Trivial update: noted compatibility through WP 4.9+, added README.md for GitHub, updated copyright date (2018), and other minor changes
 
 = 2.0.4 =
 Recommended minor update: fixed PHP warning in WP 4.7 due to function deprecation, noted compatibility through WP 4.7+, updated copyright date
