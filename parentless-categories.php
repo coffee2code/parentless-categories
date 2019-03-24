@@ -174,7 +174,7 @@ function c2c_get_parentless_categories( $post_id = false, $omit_ancestors = true
 	 * @param bool $omit_ancestors Prevent any ancestors from also being listed,
 	 *                             not just immediate parents? Default true.
 	 */
-	$omit_ancestors = apply_filters( 'c2c_get_parentless_categories_omit_ancestors', $omit_ancestors );
+	$omit_ancestors = (bool) apply_filters( 'c2c_get_parentless_categories_omit_ancestors', $omit_ancestors );
 
 	// Go through all categories and get, then filter out, parents.
 	foreach ( $categories as $c ) {
