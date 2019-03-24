@@ -185,6 +185,7 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 
 = () =
 * New: Add CHANGELOG.md file and move all but most recent changelog entries into it
+* New: Add inline documentation for hooks
 * Change: Split paragraph in README.md's "Support" section into two
 * Change: Note compatibility through WP 5.1+
 * Change: Update copyright date (2019)
