@@ -104,34 +104,35 @@ function c2c_get_parentless_categories_list( $separator = '', $post_id = false )
 	$rel = ( is_object( $wp_rewrite ) && $wp_rewrite->using_permalinks() ) ? 'rel="category tag"' : 'rel="category"';
 
 	$thelist = '';
-	if ( '' == $separator ) {
+
+	if ( ! $separator ) {
 		$thelist .= '<ul class="post-categories">';
-		foreach ( $categories as $category ) {
-			$thelist .= "\n\t<li>";
-			$thelist .= sprintf(
-				'<a href="%s" title="%s" %s>%s</a></li>',
-				esc_url( get_category_link( $category->term_id ) ),
-				esc_attr( sprintf( __( 'View all posts in %s' ), $category->name ) ),
-				$rel,
-				esc_html( $category->name )
-			);
-		}
-		$thelist .= '</ul>';
-	} else {
-		$i = 0;
-		foreach ( $categories as $category ) {
+	}
+
+	foreach ( $categories as $i => $category ) {
+		if ( $separator ) {
 			if ( 0 < $i ) {
 				$thelist .= $separator;
 			}
-			$thelist .= sprintf(
-				'<a href="%s" title="%s" %s>%s</a>',
-				esc_url( get_category_link( $category->term_id ) ),
-				esc_attr( sprintf( __( 'View all posts in %s' ), $category->name ) ),
-				$rel,
-				esc_html( $category->name )
-			);
-			++$i;
+		} else {
+			$thelist .= "\n\t<li>";
 		}
+
+		$thelist .= sprintf(
+			'<a href="%s" title="%s" %s>%s</a>',
+			esc_url( get_category_link( $category->term_id ) ),
+			esc_attr( sprintf( __( 'View all posts in %s' ), $category->name ) ),
+			$rel,
+			esc_html( $category->name )
+		);
+
+		if ( ! $separator ) {
+			$thelist .= '</li>';
+		}
+	}
+
+	if ( ! $separator ) {
+		$thelist .= '</ul>';
 	}
 
 	/** This filter is documented in parentless-categories.php */
