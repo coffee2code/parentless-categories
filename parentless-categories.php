@@ -95,7 +95,7 @@ function c2c_get_parentless_categories_list( $separator = '', $post_id = false )
 		 */
 		return apply_filters(
 			'c2c_parentless_categories_list',
-			apply_filters( 'parentless_categories', __( 'Uncategorized' ), $separator ), // Deprecated as of v2.0
+			apply_filters_deprecated( 'parentless_categories', array( __( 'Uncategorized' ), $separator ), '2.0', 'c2c_parentless_categories_list' ),
 			$separator,
 			$post_id
 		);
@@ -129,7 +129,7 @@ function c2c_get_parentless_categories_list( $separator = '', $post_id = false )
 	/** This filter is documented in parentless-categories.php */
 	return apply_filters(
 		'c2c_parentless_categories_list',
-		apply_filters( 'parentless_categories', $thelist, $separator ), // Deprecated as of v2.0
+		apply_filters_deprecated( 'parentless_categories', array( $thelist, $separator ), '2.0', 'c2c_parentless_categories_list' ),
 		$separator,
 		$post_id
 	);
