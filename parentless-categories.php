@@ -80,9 +80,8 @@ if ( ! function_exists( 'c2c_get_parentless_categories_list' ) ) :
 function c2c_get_parentless_categories_list( $separator = '', $post_id = false ) {
 	global $wp_rewrite;
 
-	$categories = c2c_get_parentless_categories( $post_id );
-
-	if ( empty( $categories ) ) {
+	// Check if post's post ype supports categories.
+	if ( ! is_object_in_taxonomy( get_post_type( $post_id ), 'category' ) ) {
 		/**
 		 * Filters the HTML formatted list of parentless categories.
 		 *
@@ -90,9 +89,17 @@ function c2c_get_parentless_categories_list( $separator = '', $post_id = false )
 		 *
 		 * @param string $thelist   The HTML-formatted list of categories, or
 		 *                          `__( 'Uncategorized' )` if the post didn't have
-		 *                          any categories
+		 *                          any categories, or an empty string if the post's
+		 *                          post type doesn't support categories.
 		 * @param string $separator String to use as the separator.
 		 */
+		return apply_filters( 'c2c_parentless_categories_list', '', $separator, $post_id );
+    }
+
+	$categories = c2c_get_parentless_categories( $post_id );
+
+	if ( empty( $categories ) ) {
+		/** This filter is documented in parentless-categories.php */
 		return apply_filters(
 			'c2c_parentless_categories_list',
 			apply_filters_deprecated( 'parentless_categories', array( __( 'Uncategorized', 'parentless-categories' ), $separator ), '2.0', 'c2c_parentless_categories_list' ),

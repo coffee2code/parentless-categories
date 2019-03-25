@@ -184,6 +184,7 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 == Changelog ==
 
 = () =
+* New: Check that the post's post type supports categories before attempting to list any (and if it doesn't, apply `c2c_parentless_categories_list` filter against empty string)
 * New: Add CHANGELOG.md file and move all but most recent changelog entries into it
 * New: Add inline documentation for hooks
 * Change: Use `apply_filters_deprecated()` to formally deprecate the 'parentless_categories' filter
