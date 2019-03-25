@@ -71,6 +71,8 @@ if ( ! function_exists( 'c2c_get_parentless_categories_list' ) ) :
  *
  * @since 2.0
  *
+ * @see get_the_category_list() The WP core function this was originally based on.
+ *
  * @param  string    $separator Optional. String to use as the separator.
  *                              Default ''.
  * @param  int|false $post_id   Optional. Post ID. If 'false', then the current
