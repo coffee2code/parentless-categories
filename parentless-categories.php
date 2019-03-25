@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Parentless Categories
- * Version:     2.0.5
+ * Version:     2.1
  * Plugin URI:  http://coffee2code.com/wp-plugins/parentless-categories/
  * Author:      Scott Reilly
  * Author URI:  http://coffee2code.com/
@@ -18,8 +18,13 @@
  *
  * @package Parentless_Categories
  * @author  Scott Reilly
- * @version 2.0.5
+ * @version 2.1
  */
+
+/*
+ * TODO:
+ * - Should `c2c_get_parentless_categories_list()` apply 'the_category_list'
+ *   filter as `get_the_category_list()` does as of WP 4.4?
 
 /*
 	Copyright (c) 2008-2019 by Scott Reilly (aka coffee2code)
