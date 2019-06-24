@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.2
-Stable tag: 2.1
+Stable tag: 2.1.1
 
 Like the_category(), list categories assigned to a post, but excluding assigned categories that have a child category also assigned to the post.
 
@@ -183,6 +183,12 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
+= 2.1.1 (2019-06-23) =
+* Change: Update unit test install script and bootstrap to use latest WP unit test repo
+* Change: Note compatibility through WP 5.2+
+* Change: Make minor code formatting tweaks
+* Change: Update readme.txt documentation for `c2c_parentless_categories_list` hook to reflect potential for first argument to be empty string
+
 = 2.1 (2019-03-24) =
 * New: Check that the post's post type supports categories before attempting to list any (and if it doesn't, apply `c2c_parentless_categories_list` filter against empty string)
 * New: Add CHANGELOG.md file and move all but most recent changelog entries into it
@@ -208,20 +214,13 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 * Change: Note compatibility through WP 4.9+
 * Change: Update copyright date (2018)
 
-= 2.0.4 (2017-02-13) =
-* Fix: Replace use of deprecated (in WP 4.7) `_usort_terms_by_name()` with `wp_list_sort()` for WP 4.7+
-* Change: Update unit test bootstrap
-    * Default `WP_TESTS_DIR` to `/tmp/wordpress-tests-lib` rather than erroring out if not defined via environment variable
-    * Enable more error output for unit tests
-* Change: Note compatibility through WP 4.7+
-* Change: Minor readme.txt content and formatting tweaks
-* Change: Update copyright date (2017)
-* New: Add LICENSE file
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/parentless-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.1.1 =
+Trivial update: modernized unit tests and noted compatibility through WP 5.2+
 
 = 2.1 =
 Minor update: checked for post type's support of categories, created CHANGELOG.md to store historical changelog outside of readme.txt, noted compatibility through WP 5.1+, updated copyright date (2019), and minor code improvements
