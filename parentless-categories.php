@@ -101,11 +101,11 @@ function c2c_get_parentless_categories_list( $separator = '', $post_id = false )
 		 * @param string $separator String to use as the separator.
 		 */
 		return apply_filters( 'c2c_parentless_categories_list', '', $separator, $post_id );
-    }
+	}
 
 	$categories = c2c_get_parentless_categories( $post_id );
 
-	if ( empty( $categories ) ) {
+	if ( ! $categories ) {
 		/** This filter is documented in parentless-categories.php */
 		return apply_filters(
 			'c2c_parentless_categories_list',
