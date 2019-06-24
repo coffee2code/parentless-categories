@@ -4,6 +4,7 @@
 * Change: Update unit test install script and bootstrap to use latest WP unit test repo
 * Change: Note compatibility through WP 5.2+
 * Change: Make minor code formatting tweaks
+* Change: Update readme.txt documentation for `c2c_parentless_categories_list` hook to reflect potential for first argument to be empty string
 
 ## 2.1 _(2019-03-24)_
 * New: Check that the post's post type supports categories before attempting to list any (and if it doesn't, apply `c2c_parentless_categories_list` filter against empty string)

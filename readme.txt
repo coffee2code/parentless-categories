@@ -135,7 +135,7 @@ The 'c2c_parentless_categories_list' filter allows you to customize or override 
 
 Arguments:
 
-* string    $thelist   : the HTML-formatted list of categories, or `__( 'Uncategorized' )` if the post didn't have any categories
+* string    $thelist   : the HTML-formatted list of categories, or `__( 'Uncategorized' )` if the post didn't have any categories, or an empty string if the post's post type doesn't support categories
 * string    $separator : the separator specified by the user, or '' if not specified
 * int|false $post_id   : the ID of the post, or false to indicate the current post
 
