@@ -10,7 +10,7 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Description: List a post's categories that don't have a parent category also directly assigned to the post (basically lists all leaf nodes).
  *
- * Compatible with WordPress 4.6 through 5.2+.
+ * Compatible with WordPress 4.6 through 5.3+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
@@ -27,7 +27,7 @@
  *   filter as `get_the_category_list()` does as of WP 4.4?
 
 /*
-	Copyright (c) 2008-2019 by Scott Reilly (aka coffee2code)
+	Copyright (c) 2008-2020 by Scott Reilly (aka coffee2code)
 
 	This program is free software; you can redistribute it and/or
 	modify it under the terms of the GNU General Public License
