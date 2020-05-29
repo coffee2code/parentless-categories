@@ -2,9 +2,9 @@
 /**
  * Plugin Name: Parentless Categories
  * Version:     2.1.2
- * Plugin URI:  http://coffee2code.com/wp-plugins/parentless-categories/
+ * Plugin URI:  https://coffee2code.com/wp-plugins/parentless-categories/
  * Author:      Scott Reilly
- * Author URI:  http://coffee2code.com/
+ * Author URI:  https://coffee2code.com/
  * Text Domain: parentless-categories
  * License:     GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html

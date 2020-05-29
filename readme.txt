@@ -54,7 +54,7 @@ Outputs something like:
 
 `<a href="http://yourblog.com/category/fruiting/cucumber">Cucumber</a>, <a href="http://yourblog.com/category/fruiting/pumpkin">Pumpkin</a>`
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/parentless-categories/) | [Plugin Directory Page](https://wordpress.org/plugins/parentless-categories/) | [GitHub](https://github.com/coffee2code/parentless-categories/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](https://coffee2code.com/wp-plugins/parentless-categories/) | [Plugin Directory Page](https://wordpress.org/plugins/parentless-categories/) | [GitHub](https://github.com/coffee2code/parentless-categories/) | [Author Homepage](https://coffee2code.com)
 
 
 == Installation ==
