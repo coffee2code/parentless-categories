@@ -12,7 +12,7 @@ Provides a template tag like `the_category()` that lists categories assigned to 
 
 == Description ==
 
-This plugin provides a template tag which acts a modified version of WordPress's built-in template tag, `the_category()`. `the_category()` lists all categories directly assigned to the specified post. `c2c_parentless_categories()` lists those categories, except for categories that are parents to other assigned categories.
+This plugin provides a template tag which acts as a modified version of WordPress's built-in template tag, `the_category()`. `the_category()` lists all categories directly assigned to the specified post. `c2c_parentless_categories()` lists those categories, except for categories that are parents to other assigned categories.
 
 For example, assume your category structure is hierarchical and looks like this:
 

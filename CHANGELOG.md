@@ -6,6 +6,7 @@
 * Change: Note compatibility through WP 5.4+
 * Change: Reword plugin description
 * Change: Update links to coffee2code.com to be HTTPS
+* Change: Fix typo (missing word) in documentation in readme.txt
 * Change: Unit tests: Remove unnecessary unregistering of hooks and thusly delete `tearDown()`
 
 ## 2.1.2 _(2019-11-23)_
