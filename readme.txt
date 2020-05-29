@@ -8,8 +8,7 @@ Requires at least: 4.6
 Tested up to: 5.4
 Stable tag: 2.1.2
 
-Like the_category(), list categories assigned to a post, but excluding assigned categories that have a child category also assigned to the post.
-
+Provides a template tag like `the_category()` that lists categories assigned to a post, but excludes assigned categories that have a child category also assigned to the post.
 
 == Description ==
 
