@@ -12,12 +12,6 @@ class Parentless_Categories_Test extends WP_UnitTestCase {
 		$this->create_categories();
 	}
 
-	public function tearDown() {
-		parent::tearDown();
-
-		remove_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
-	}
-
 
 	//
 	//
