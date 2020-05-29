@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.4
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 
 Provides a template tag like `the_category()` that lists categories assigned to a post, but excludes assigned categories that have a child category also assigned to the post.
 
@@ -182,6 +182,15 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
+= 2.1.3 (2020-05-28) =
+* New: Add TODO.md and move existing TODO list from top of main plugin file into it
+* Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
+* Change: Note compatibility through WP 5.4+
+* Change: Reword plugin description
+* Change: Update links to coffee2code.com to be HTTPS
+* Change: Fix typo (missing word) in documentation in readme.txt
+* Change: Unit tests: Remove unnecessary unregistering of hooks and thusly delete `tearDown()`
+
 = 2.1.2 (2019-11-23) =
 * Change: Note compatibility through WP 5.3+
 * Change: Update copyright date (2020)
@@ -192,25 +201,13 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 * Change: Make minor code formatting tweaks
 * Change: Update readme.txt documentation for `c2c_parentless_categories_list` hook to reflect potential for first argument to be empty string
 
-= 2.1 (2019-03-24) =
-* New: Check that the post's post type supports categories before attempting to list any (and if it doesn't, apply `c2c_parentless_categories_list` filter against empty string)
-* New: Add CHANGELOG.md file and move all but most recent changelog entries into it
-* New: Add inline documentation for hooks
-* Change: Use `apply_filters_deprecated()` to formally deprecate the 'parentless_categories' filter
-* Change: Specify plugin's textdomain to translation calls for strings
-* Change: Cast return value of `c2c_get_parentless_categories_omit_ancestors` filter as boolean
-* Change: Use `sprintf()` to produce markup rather than concatenating various strings, function calls, and variables
-* Change: Minor refactor to reduce duplication of code
-* Change: Split paragraph in README.md's "Support" section into two
-* Change: Note compatibility through WP 5.1+
-* Change: Drop compatibility with versions of WP older than 4.6
-* Change: Update copyright date (2019)
-* Change: Update License URI to be HTTPS
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/parentless-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.1.3 =
+Trivial update: Reworded plugin description, added TODO.md file, fixed some documentation typos, updated a few URLs to be HTTPS, and noted compatibility through WP 5.4+
 
 = 2.1.2 =
 Trivial update: noted compatibility through WP 5.3+ and updated copyright date (2020)
