@@ -22,11 +22,6 @@
  */
 
 /*
- * TODO:
- * - Should `c2c_get_parentless_categories_list()` apply 'the_category_list'
- *   filter as `get_the_category_list()` does as of WP 4.4?
-
-/*
 	Copyright (c) 2008-2020 by Scott Reilly (aka coffee2code)
 
 	This program is free software; you can redistribute it and/or
