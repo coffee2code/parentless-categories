@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.5
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 
 Provides a template tag like `the_category()` that lists categories assigned to a post, but excludes assigned categories that have a child category also assigned to the post.
 
@@ -182,6 +182,16 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
+= 2.1.4 (2020-09-04) =
+* Change: Restructure unit test file structure
+    * New: Create new subdirectory `phpunit/` to house all files related to unit testing
+    * Change: Move `bin/` to `phpunit/bin/`
+    * Change: Move `tests/bootstrap.php` to `phpunit/`
+    * Change: Move `tests/` to `phpunit/tests/`
+    * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
+* Change: Note compatibility through WP 5.5+
+* New: Add a few more possible TODO items
+
 = 2.1.3 (2020-05-28) =
 * New: Add TODO.md and move existing TODO list from top of main plugin file into it
 * Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
@@ -195,16 +205,13 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 * Change: Note compatibility through WP 5.3+
 * Change: Update copyright date (2020)
 
-= 2.1.1 (2019-06-23) =
-* Change: Update unit test install script and bootstrap to use latest WP unit test repo
-* Change: Note compatibility through WP 5.2+
-* Change: Make minor code formatting tweaks
-* Change: Update readme.txt documentation for `c2c_parentless_categories_list` hook to reflect potential for first argument to be empty string
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/parentless-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.1.4 =
+Trivial update: Restructured unit test file structure and noted compatibility through WP 5.5+.
 
 = 2.1.3 =
 Trivial update: Reworded plugin description, added TODO.md file, fixed some documentation typos, updated a few URLs to be HTTPS, and noted compatibility through WP 5.4+
