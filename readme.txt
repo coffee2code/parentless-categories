@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.7
-Stable tag: 2.1.4
+Stable tag: 2.1.5
 
 Provides a template tag like `the_category()` that lists categories assigned to a post, but excludes assigned categories that have a child category also assigned to the post.
 
@@ -182,6 +182,10 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
+= 2.1.5 (2021-04-16) =
+* Change: Note compatibility through WP 5.7+
+* Change: Update copyright date (2021)
+
 = 2.1.4 (2020-09-04) =
 * Change: Restructure unit test file structure
     * New: Create new subdirectory `phpunit/` to house all files related to unit testing
@@ -201,14 +205,13 @@ add_filter( 'c2c_get_parentless_categories_omit_ancestors', '__return_false' );
 * Change: Fix typo (missing word) in documentation in readme.txt
 * Change: Unit tests: Remove unnecessary unregistering of hooks and thusly delete `tearDown()`
 
-= 2.1.2 (2019-11-23) =
-* Change: Note compatibility through WP 5.3+
-* Change: Update copyright date (2020)
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/parentless-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.1.5 =
+Trivial update: noted compatibility through WP 5.7+ and updated copyright date (2021)
 
 = 2.1.4 =
 Trivial update: Restructured unit test file structure and noted compatibility through WP 5.5+.
