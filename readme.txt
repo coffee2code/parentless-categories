@@ -58,7 +58,7 @@ Links: [Plugin Homepage](https://coffee2code.com/wp-plugins/parentless-categorie
 
 == Installation ==
 
-1. Install via the built-in WordPress plugin installer. Or download and unzip `parentless-categories.zip` inside the plugins directory for your site (typically `wp-content/plugins/`)
+1. Install via the built-in WordPress plugin installer. Or install the plugin code inside the plugins directory for your site (typically `/wp-content/plugins/`).
 2. Activate the plugin through the 'Plugins' admin menu in WordPress
 3. Optional: Add filters for 'c2c_parentless_categories_list' to filter parentless category listing
 4. Use the template tag `<?php c2c_parentless_categories(); ?>` in a theme template somewhere inside "the loop"
