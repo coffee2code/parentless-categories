@@ -6,7 +6,6 @@ The following list comprises ideas, suggestions, and known issues, all of which 
 
 * Should `c2c_get_parentless_categories_list()` apply 'the_category_list' filter as `get_the_category_list()` does as of WP 4.4?
 * Add a block
-* Remove deprecated functions
 * Drop pre-WP4.7 support
 
 Feel free to make your own suggestions or champion for something already on the list (via the [plugin's support forum on WordPress.org](https://wordpress.org/support/plugin/parentless-categories/) or on [GitHub](https://github.com/coffee2code/parentless-categories/) as an issue or PR).

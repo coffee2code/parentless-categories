@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* Change: Remove long-deprecated functions `parentless_categories()`, `get_parentless_categories_list()`, and `get_parentless_categories()`
 * New: Add DEVELOPER-DOCS.md and move template tag and hooks documentation into it
 * Change: Tweak installation instruction
 * Change: Note compatibility through WP 5.8+
