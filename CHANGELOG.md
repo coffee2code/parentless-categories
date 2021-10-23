@@ -1,6 +1,13 @@
 # Changelog
 
-## _(in-progress)_
+## 2.2 _(2021-10-22)_
+
+### Highlights:
+
+This minor release removes support for long-deprecated functions (`parentless_categories()`, `get_parentless_categories_list()`, `get_parentless_categories()`), adds DEVELOPER-DOCS.md, notes compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests.
+
+### Details:
+
 * Change: Remove long-deprecated functions `parentless_categories()`, `get_parentless_categories_list()`, and `get_parentless_categories()`
 * New: Add DEVELOPER-DOCS.md and move template tag and hooks documentation into it
 * Change: Tweak installation instruction

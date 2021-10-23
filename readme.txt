@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.8
-Stable tag: 2.1.5
+Stable tag: 2.2
 
 Provides a template tag like `the_category()` that lists categories assigned to a post, but excludes assigned categories that have a child category also assigned to the post.
 
@@ -97,6 +97,25 @@ Customizes the function argument indicating if ancestor categories of all direct
 
 == Changelog ==
 
+= 2.2 (2021-10-22) =
+Highlights:
+
+This minor release removes support for long-deprecated functions (`parentless_categories()`, `get_parentless_categories_list()`, `get_parentless_categories()`), adds DEVELOPER-DOCS.md, notes compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests.
+
+Details:
+
+* Change: Remove long-deprecated functions `parentless_categories()`, `get_parentless_categories_list()`, and `get_parentless_categories()`
+* New: Add DEVELOPER-DOCS.md and move template tag and hooks documentation into it
+* Change: Tweak installation instruction
+* Change: Note compatibility through WP 5.8+
+* Unit tests:
+    * Change: Restructure unit test directories
+        * Change: Move `phpunit/` into `tests/phpunit/`
+        * Change: Move `phpunit/bin/` into `tests/`
+    * Change: Remove 'test-' prefix from unit test file
+    * Change: In bootstrap, store path to plugin file constant
+    * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
+
 = 2.1.5 (2021-04-16) =
 * Change: Note compatibility through WP 5.7+
 * Change: Update copyright date (2021)
@@ -111,19 +130,13 @@ Customizes the function argument indicating if ancestor categories of all direct
 * Change: Note compatibility through WP 5.5+
 * New: Add a few more possible TODO items
 
-= 2.1.3 (2020-05-28) =
-* New: Add TODO.md and move existing TODO list from top of main plugin file into it
-* Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
-* Change: Note compatibility through WP 5.4+
-* Change: Reword plugin description
-* Change: Update links to coffee2code.com to be HTTPS
-* Change: Fix typo (missing word) in documentation in readme.txt
-* Change: Unit tests: Remove unnecessary unregistering of hooks and thusly delete `tearDown()`
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/parentless-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.2 =
+Minor update: removed support for long-deprecated functions (`parentless_categories()`, `get_parentless_categories_list()`, `get_parentless_categories()`), added DEVELOPER-DOCS.md, noted compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests
 
 = 2.1.5 =
 Trivial update: noted compatibility through WP 5.7+ and updated copyright date (2021)
