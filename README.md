@@ -1,6 +1,6 @@
 # Parentless Categories
 
-A plugin for WordPress that provides a template tag like `the_category()` that lists categories assigned to a post, but excludes assigned categories that have a child category also assigned to the post.
+A plugin for WordPress that provides a template tag like `the_category()` to list categories assigned to a post except those that have a child category also assigned to the post.
 
 This plugin is available in the WordPress Plugin Directory: https://wordpress.org/plugins/parentless-categories/
 

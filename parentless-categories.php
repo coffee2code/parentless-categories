@@ -8,7 +8,7 @@
  * Text Domain: parentless-categories
  * License:     GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Description: Provides a template tag like <code>the_category()</code> that lists categories assigned to a post, but excludes assigned categories that have a child category also assigned to the post.
+ * Description: Provides a template tag like the_category() to list categories assigned to a post except those that have a child category also assigned to the post.
  *
  * Compatible with WordPress 4.6 through 6.6+.
  *

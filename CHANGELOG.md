@@ -4,6 +4,7 @@
 * Change: Prevent translations from containing unintended markup
 * Change: Add missing inline comment for translators
 * Change: Note compatibility through WP 6.6+
+* Change: Shorten plugin description
 * Change: Update copyright date (2024)
 * Change: Remove development and testing-related files from release packaging
 * New: Add `.gitignore` file
