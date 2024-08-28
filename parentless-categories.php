@@ -94,6 +94,7 @@ function c2c_get_parentless_categories_list( $separator = '', $post_id = false )
 		 *                          any categories, or an empty string if the post's
 		 *                          post type doesn't support categories.
 		 * @param string $separator String to use as the separator.
+		 * @param int    $post_id   Post ID.
 		 */
 		return apply_filters( 'c2c_parentless_categories_list', '', $separator, $post_id );
 	}
@@ -188,7 +189,7 @@ function c2c_get_parentless_categories( $post_id = false, $omit_ancestors = true
 	 * directly assigned themselves) should be omitted from the return list of
 	 * categories.
 	 *
-	 * @since
+	 * @since 2.0
 	 *
 	 * @param bool $omit_ancestors Prevent any ancestors from also being listed,
 	 *                             not just immediate parents? Default true.
