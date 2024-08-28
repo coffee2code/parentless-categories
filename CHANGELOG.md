@@ -1,6 +1,13 @@
 # Changelog
 
-## _(in-progress)_
+## 2.3 _(2024-08-28)_
+
+### Highlights:
+
+This minor release prevents translations from containing unintended markup, notes compatibility through WP 6.6+, removes unit tests from release packaging, and updates copyright date (2024).
+
+### Details:
+
 * Change: Prevent translations from containing unintended markup
 * Change: Add missing inline comment for translators
 * Change: Note compatibility through WP 6.6+
