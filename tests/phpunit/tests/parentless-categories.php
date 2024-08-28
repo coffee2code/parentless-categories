@@ -264,4 +264,27 @@ class Parentless_Categories_Test extends WP_UnitTestCase {
 		$this->assertEquals( $expected, $output);
 	}
 
+	/*
+	 * filter: c2c_parentless_categories_list
+	 */
+
+	public function test_filter_c2c_parentless_categories_list_returns_unintended_markup() {
+		add_filter( 'c2c_parentless_categories_list', function ( $thelist ) {
+			return '<div><ul id="bogus" class="good"><li id="bogus45"><script>alert("Danger!");</script><em>Good</em></li></ul>';
+		} );
+
+		$post_id = $this->factory->post->create();
+		wp_set_post_categories( $post_id, array( $this->cats['cat'], $this->cats['cat_1'], $this->cats['cat_1_1'] ) );
+
+		ob_start();
+		c2c_parentless_categories( '', $post_id );
+		$output = ob_get_contents();
+		ob_end_clean();
+
+		$this->assertEquals(
+			'<ul class="good"><li>alert("Danger!");Good</li></ul>',
+			$output
+		);
+	}
+
 }
