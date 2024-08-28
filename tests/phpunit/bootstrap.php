@@ -5,6 +5,9 @@
  * @package Parentless_Categories
  */
 
+// Prevent web access.
+( php_sapi_name() !== 'cli' ) && die();
+
 define( 'PARENTLESS_CATEGORIES_PLUGIN_DIR',  dirname( __FILE__, 3 ) );
 define( 'PARENTLESS_CATEGORIES_PLUGIN_FILE', PARENTLESS_CATEGORIES_PLUGIN_DIR . '/parentless-categories.php' );
 
