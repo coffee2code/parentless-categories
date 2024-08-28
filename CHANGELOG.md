@@ -5,6 +5,8 @@
 * Change: Update copyright date (2024)
 * Change: Remove development and testing-related files from release packaging
 * New: Add `.gitignore` file
+* Unit tests:
+    * Change: In bootstrap, store path to plugin directory in a constant
 
 ## 2.2.1 _(2023-05-20)_
 * Change: Note compatibility through WP 6.3+

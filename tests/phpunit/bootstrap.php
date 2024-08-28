@@ -5,7 +5,8 @@
  * @package Parentless_Categories
  */
 
-define( 'PARENTLESS_CATEGORIES_PLUGIN_FILE', dirname( __FILE__, 3 ) . '/parentless-categories.php' );
+define( 'PARENTLESS_CATEGORIES_PLUGIN_DIR',  dirname( __FILE__, 3 ) );
+define( 'PARENTLESS_CATEGORIES_PLUGIN_FILE', PARENTLESS_CATEGORIES_PLUGIN_DIR . '/parentless-categories.php' );
 
 ini_set( 'display_errors', 'on' );
 error_reporting( E_ALL );
