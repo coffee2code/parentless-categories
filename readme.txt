@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 6.8
-Stable tag: 2.3
+Stable tag: 2.3.1
 
 Provides a template tag like the_category() to list categories assigned to a post except those that have a child category also assigned to the post.
 
@@ -97,6 +97,13 @@ Customizes the function argument indicating if ancestor categories of all direct
 
 == Changelog ==
 
+= 2.3.1 (2025-04-20) =
+* Change: Note compatibility through WP 6.8+
+* Change: Note compatibility through PHP 8.3+
+* Change: Update copyright date (2025)
+* Unit tests:
+    * Change: Explicitly define return type for overridden method
+
 = 2.3 (2024-08-28) =
 Highlights:
 
@@ -123,29 +130,13 @@ Details:
 * Change: Note compatibility through WP 6.3+
 * Change: Update copyright date (2023)
 
-= 2.2 (2021-10-22) =
-Highlights:
-
-This minor release removes support for long-deprecated functions (`parentless_categories()`, `get_parentless_categories_list()`, `get_parentless_categories()`), adds DEVELOPER-DOCS.md, notes compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests.
-
-Details:
-
-* Change: Remove long-deprecated functions `parentless_categories()`, `get_parentless_categories_list()`, and `get_parentless_categories()`
-* New: Add DEVELOPER-DOCS.md and move template tag and hooks documentation into it
-* Change: Tweak installation instruction
-* Change: Note compatibility through WP 5.8+
-* Unit tests:
-    * Change: Restructure unit test directories
-        * Change: Move `phpunit/` into `tests/phpunit/`
-        * Change: Move `phpunit/bin/` into `tests/`
-    * Change: Remove 'test-' prefix from unit test file
-    * Change: In bootstrap, store path to plugin file constant
-    * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/parentless-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.3.1 =
+Trivial update: noted compatibility through WP 6.8+ and PHP 8.3+, and updated copyright date (2025)
 
 = 2.3 =
 Minor update: prevented translations from containing unintended markup, noted compatibility through WP 6.6+, removed unit tests from release packaging, and updated copyright date (2024)
