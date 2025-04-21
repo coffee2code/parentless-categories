@@ -10,7 +10,7 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Description: Provides a template tag like the_category() to list categories assigned to a post except those that have a child category also assigned to the post.
  *
- * Compatible with WordPress 4.6 through 6.6+.
+ * Compatible with WordPress 4.6 through 6.8+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
